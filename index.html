@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Simple Weather Widget</title>
+    <link rel="stylesheet" href="styles.css?v=1771574395">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* Fallback if external CSS fails temporarily */
+        body { font-family: sans-serif; background: #10181f; color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="widget-container">
+        <header class="header">
+            <div class="location-group">
+                <i class="ph ph-map-pin"></i>
+                <h1 id="location">Detecting Location...</h1>
+            </div>
+            <p id="datetime">--:--</p>
+        </header>
+        
+        <main class="main-weather">
+            <div class="weather-visual">
+                <i id="weather-icon" class="ph ph-cloud-sun"></i>
+            </div>
+            <div class="weather-temp">
+                <span id="temperature">--</span><span class="unit">°C</span>
+            </div>
+            <div class="weather-desc" id="condition">Loading...</div>
+        </main>
+
+        <footer class="details">
+            <div class="detail-item">
+                <i class="ph ph-drop"></i>
+                <div class="detail-info">
+                    <span class="label">Humidity</span>
+                    <span class="value" id="humidity">--%</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <i class="ph ph-wind"></i>
+                <div class="detail-info">
+                    <span class="label">Wind</span>
+                    <span class="value" id="wind">-- km/h</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <i class="ph ph-thermometer"></i>
+                <div class="detail-info">
+                    <span class="label">Feels Like</span>
+                    <span class="value" id="feels-like">--°</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js?v=1771574395"></script>
+</body>
+</html>
